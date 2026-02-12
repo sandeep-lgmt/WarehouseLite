@@ -1,18 +1,62 @@
-## Getting Started
+ # WarehouseLite
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+WarehouseLite is a console-based inventory management system built using Java and MySQL.  
+The application allows basic warehouse operations such as adding products, updating stock, selling items, and deleting products from the database.
 
-## Folder Structure
+This project was developed to practice Java programming concepts and JDBC database connectivity.
 
-The workspace contains two folders by default, where:
+ 
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Features
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Add new products
+- View all products
+- Update product quantity
+- Sell products with stock validation
+- Low stock alert notification
+- Delete products
+- Data stored in MySQL database
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+ 
 
-## Dependency Management
+## Technologies Used
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Java (JDK 17 or higher)
+- MySQL
+- JDBC (MySQL Connector)
+- VS Code
+
+
+
+## Database Setup
+
+1. Create a database named:
+
+- warehouse
+
+2.Run the following SQL command:
+
+- CREATE TABLE products (
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100) NOT NULL,
+quantity INT NOT NULL,
+price DOUBLE NOT NULL
+);
+
+ 
+
+## Compile the Project
+javac -cp "lib/mysql-connector-j-9.6.0.jar" -d out src/db/.java src/model/.java src/service/*.java src/App.java
+
+ 
+
+## Run the Application
+java -cp "out;lib/mysql-connector-j-9.6.0.jar" App
+
+ 
+
+## Author
+
+Sandeep Kumar
+
+
