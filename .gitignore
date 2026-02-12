@@ -1,0 +1,16 @@
+# Compiled output
+/out/
+
+# Compiled classes
+*.class
+
+# MySQL connector jar
+/lib/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
